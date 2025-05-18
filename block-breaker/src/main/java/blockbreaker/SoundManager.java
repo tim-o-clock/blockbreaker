@@ -15,6 +15,7 @@ public class SoundManager {
     public static final String BALL_LOST = "ball_lost";
     public static final String LEVEL_WON = "level_won";
     public static final String GAME_OVER = "game_over";
+    public static final String BLOCK_BREAKER = "block_breaker";
 
 
     public SoundManager() {
@@ -25,6 +26,7 @@ public class SoundManager {
             loadSound(BALL_LOST, "/sounds/ball_lost.wav");
             loadSound(LEVEL_WON, "/sounds/level_won.wav");
             loadSound(GAME_OVER, "/sounds/game_over.wav");
+            loadSound(BLOCK_BREAKER, "/sounds/Block-Breacker.wav");
         } catch (Exception e) {
             System.err.println("Fehler beim Laden der Sounds: " + e.getMessage());
             e.printStackTrace();

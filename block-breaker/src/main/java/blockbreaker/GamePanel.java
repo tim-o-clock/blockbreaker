@@ -59,7 +59,7 @@ public class GamePanel extends JPanel implements Runnable {
     
     private void loadImages() {
         try {
-            URL bgImageUrl = getClass().getResource("/images/background.JPG");
+            URL bgImageUrl = getClass().getResource("/images/background.png");
             if (bgImageUrl == null) {
                 System.err.println("Hintergrundbild nicht gefunden: /images/background.png. Standardhintergrund wird verwendet.");
                 backgroundImage = null;
@@ -98,6 +98,7 @@ public class GamePanel extends JPanel implements Runnable {
             gameThread = new Thread(this);
             gameThread.start();
             running = true;
+            soundManager.playSound(SoundManager.BLOCK_BREAKER);
         }
     }
 
