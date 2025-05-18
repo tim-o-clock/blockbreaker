@@ -10,6 +10,7 @@ public class Ball extends GameObject {
     private GamePanel gamePanel; // Referenz auf das GamePanel für Kollisionen etc.
 
     public static final int INITIAL_SPEED = 3; // Anfangsgeschwindigkeit
+    public static final int INITIAL_RADIUS = 10; // Anfangsgeschwindigkeit
 
     public Ball(int x, int y, int radius, GamePanel gamePanel) {
         super(x, y, radius * 2, radius * 2); // Breite und Höhe sind Durchmesser
