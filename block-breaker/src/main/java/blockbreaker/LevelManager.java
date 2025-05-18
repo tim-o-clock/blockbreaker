@@ -36,18 +36,16 @@ public class LevelManager {
         this.currentLevel = levelNumber;
         blocks.clear(); // Alte Blöcke entfernen
 
-        int blocksPerRow = (gamePanel.getWidth() - BLOCK_PADDING) / (BLOCK_WIDTH + BLOCK_PADDING);
-
         switch (levelNumber) {
             case 1:
                 // Einfaches Layout für Level 1
-                int numRowsLevel1 = 4;
+                int numRowsLevel1 = 2;
                 for (int row = 0; row < numRowsLevel1; row++) {
                     Color blockColor = rowColors[row % rowColors.length];
-                    for (int col = 0; col < blocksPerRow; col++) {
-                        int blockX = BLOCK_PADDING + col * (BLOCK_WIDTH + BLOCK_PADDING);
+                    for (int col = 0; col < 2; col++) {
+                        int blockX = BLOCK_PADDING + col * (390 + BLOCK_PADDING);
                         int blockY = LEVEL_TOP_MARGIN + row * (BLOCK_HEIGHT + BLOCK_PADDING);
-                        blocks.add(new Block(blockX, blockY, BLOCK_WIDTH, BLOCK_HEIGHT, blockColor, 1));
+                        blocks.add(new Block(blockX, blockY, 390, BLOCK_HEIGHT, blockColor, 1));
                     }
                 }
                 break;
@@ -57,13 +55,13 @@ public class LevelManager {
                 for (int row = 0; row < numRowsLevel2; row++) {
                     Color blockColor = rowColors[row % rowColors.length];
                     int strength = (row < 2) ? 2 : 1; // Obere zwei Reihen sind stärker
-                    for (int col = 0; col < blocksPerRow; col++) {
+                    for (int col = 0; col < 4; col++) {
                         // Beispiel: Ein paar Lücken lassen oder Muster
-                        if (col % (row + 1) != 0 || row <2) { // Einfaches Muster für Lücken
-                             int blockX = BLOCK_PADDING + col * (BLOCK_WIDTH + BLOCK_PADDING);
+                        //if (col % (row + 1) != 0 || row <2) { // Einfaches Muster für Lücken
+                             int blockX = BLOCK_PADDING + col * (195 + BLOCK_PADDING);
                              int blockY = LEVEL_TOP_MARGIN + row * (BLOCK_HEIGHT + BLOCK_PADDING);
-                             blocks.add(new Block(blockX, blockY, BLOCK_WIDTH, BLOCK_HEIGHT, blockColor, strength));
-                        }
+                             blocks.add(new Block(blockX, blockY, 195, BLOCK_HEIGHT, blockColor, strength));
+                        //}
                     }
                 }
                 break;
