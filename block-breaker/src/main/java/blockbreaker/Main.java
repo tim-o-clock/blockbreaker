@@ -12,7 +12,7 @@ public class Main {
             frame.add(gamePanel);
 
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            frame.setResizable(false); // Verhindert Größenänderung des Fensters
+            frame.setResizable(false); // Verhindert Größenänderung des Fensters!
             frame.pack(); // Passt die Fenstergröße an die preferredSize des GamePanels an
             frame.setLocationRelativeTo(null); // Zentriert das Fenster
             frame.setVisible(true);
