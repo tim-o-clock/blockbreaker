@@ -8,7 +8,7 @@ import java.util.List;
 public class LevelManager {
     private List<Block> blocks;
     private int currentLevel;
-    private GamePanel gamePanel; // Für Breiten- und Höheninformationen
+    private GamePanel gamePanel; // Für Breiten- und Höheninformationen!
 
     // Konstanten für Block-Layout
     public static final int BLOCK_WIDTH = 60;
